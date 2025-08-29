@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  url-metrics-checker:
+  - apiVersion: v2
+    appVersion: "1.0"
+    created: "2025-08-29T17:52:54.298497753+03:00"
+    description: A Helm chart for the external URL Prometheus metrics checker
+    digest: 03dfe51cae2a3e20e8c086269d1a60cea8dfd1550f76ec8b1aa43ebcde425059
+    name: url-metrics-checker
+    type: application
+    urls:
+    - https://nzlatev.github.io/helm-charts/charts/url-metrics-checker-0.1.0.tgz
+    version: 0.1.0
+generated: "2025-08-29T17:52:54.297019094+03:00"

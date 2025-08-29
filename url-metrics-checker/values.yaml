@@ -1,0 +1,17 @@
+replicaCount: 1
+
+image:
+  repository: nzlatev/url-metrics-checker
+  tag: v1.0
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 8000
+
+resources: {}
+
+prometheus:
+  enabled: true
+  interval: 30s
+

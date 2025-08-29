@@ -1,0 +1,17 @@
+{{- if .Values.prometheus.enabled }}
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: {{ include "url-metrics-checker.fullname" . }}
+  labels:
+    release: prometheus  # must match your Prometheus release label
+spec:
+  selector:
+    matchLabels:
+      app: {{ include "url-metrics-checker.name" . }}
+  endpoints:
+    - port: http
+      path: /metrics
+      interval: {{ .Values.prometheus.interval }}
+{{- end }}
+
