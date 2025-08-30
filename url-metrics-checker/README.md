@@ -115,7 +115,14 @@ Confirm the pod is running:
 
 kubectl get pods -n checker
 
-Port-forward to test metrics locally:
+or via Helm
+
+$ helm list -n checker
+NAME                 NAMESPACE   REVISION  UPDATED                                     STATUS       CHART                           APP VERSION
+url-metrics-checker  checker      1        2025-08-29 19:04:57.757691389 +0300 EEST    deployed     url-metrics-checker-0.1.0       1.0
+
+
+Port-forward to access and test metrics locally:
 
 kubectl port-forward service/url-metrics-service 8000:8000
 
@@ -131,6 +138,8 @@ sample_external_url_up{url="https://httpbin.org/status/503"} 0.0
 # TYPE sample_external_url_response_ms gauge
 sample_external_url_response_ms{url="https://httpstat.us/200"} 0.0
 sample_external_url_response_ms{url="https://httpbin.org/status/503"} 4418.2257652282715
+
+
 
 License
 MIT © 2025 Nikolay Zlatev
