@@ -109,6 +109,20 @@ docker push nzlatev /url-metrics-checker
 To test the Helm chart locally:
 helm install test ./url-metrics-checker
 
+# Test the Setup
+
+Confirm the pod is running:
+
+kubectl get pods -n checker
+
+Port-forward to test metrics locally:
+
+kubectl port-forward service/url-metrics-service 8000:8000
+
+Then visit: http://localhost:8000/metrics
+
+You should see the Prometheus-compatible metrics.
+
 License
 MIT © 2025 Nikolay Zlatev
 
