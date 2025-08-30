@@ -123,6 +123,15 @@ Then visit: http://localhost:8000/metrics
 
 You should see the Prometheus-compatible metrics.
 
+---
+# TYPE sample_external_url_up gauge
+sample_external_url_up{url="https://httpstat.us/200"} 0.0
+sample_external_url_up{url="https://httpbin.org/status/503"} 0.0
+# HELP sample_external_url_response_ms Response time of the external URL in milliseconds
+# TYPE sample_external_url_response_ms gauge
+sample_external_url_response_ms{url="https://httpstat.us/200"} 0.0
+sample_external_url_response_ms{url="https://httpbin.org/status/503"} 4418.2257652282715
+
 License
 MIT © 2025 Nikolay Zlatev
 
