@@ -79,7 +79,7 @@ service:
   port: 8000
 
 prometheus:
-  enabled: false   #Optional set to "true" if you're using hte Prometheus Operator
+  enabled: false   #Optional set to "true" if you're using the Prometheus Operator
   interval: 30s
 
 Prometheus Integration - Optional
